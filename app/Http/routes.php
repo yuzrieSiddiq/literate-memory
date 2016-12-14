@@ -31,8 +31,8 @@ Route::get('/sssc', function () {
     return view('sssc');
 });
 
-Route::get('/operations', function () {
-    return view('operations');
+Route::get('/studentengagement', function () {
+    return view('studentengagement');
 });
 
 Route::get('/facilities', function () {
