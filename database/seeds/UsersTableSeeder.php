@@ -40,17 +40,8 @@ class UsersTableSeeder extends Seeder
                 'role' => "sssc",
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
-            ],[
-                // 4. STUDENT ENGAGEMENT
-                'name' => "Ali bin Hasan",
-                'email' => "STDEG@email.com",
-                'username' => "STDEG",
-                'password' => bcrypt('123456'),
-                'role' => "studentengagement",
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
             ], [
-                // 5A. FACILITIES
+                // 4A. FACILITIES
                 'name' => "Daniel Wong Ka Kui",
                 'email' => "DWKK@email.com",
                 'username' => "FAC_DWKK",
@@ -59,7 +50,7 @@ class UsersTableSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ], [
-                // 5B. FACILITIES
+                // 4B. FACILITIES
                 'name' => "Siti Nusantara",
                 'email' => "SINUS@email.com",
                 'username' => "FAC_SINUS",
@@ -68,12 +59,30 @@ class UsersTableSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],[
-                // 6. ITS
+                // 5. ITS
                 'name' => "Ridhwan Yousef",
                 'email' => "RIYO@email.com",
                 'username' => "ITS_RIYO",
                 'password' => bcrypt('123456'),
                 'role' => "its",
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ], [
+                // 6A. SEA ASSISTANT
+                'name' => "Leandra Sagah",
+                'email' => "LEANDRA@email.com",
+                'username' => "SEA_LEANDRA",
+                'password' => bcrypt('123456'),
+                'role' => "seaassistant",
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ], [
+                // 6B. SEA MANAGER
+                'name' => "Hisyam",
+                'email' => "HISYAM@email.com",
+                'username' => "SEA_HISYAM",
+                'password' => bcrypt('123456'),
+                'role' => "seamanager",
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ], [
