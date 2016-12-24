@@ -19,7 +19,6 @@ class UsersTableSeeder extends Seeder
                 'email' => "SJLC@email.com",
                 'username' => "SJLC",
                 'password' => bcrypt('123456'),
-                'role' => "club",
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ], [
@@ -28,7 +27,6 @@ class UsersTableSeeder extends Seeder
                 'email' => "CHUAHS@email.com",
                 'username' => "CHUAHS",
                 'password' => bcrypt('123456'),
-                'role' => "advisor",
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ], [
@@ -37,88 +35,70 @@ class UsersTableSeeder extends Seeder
                 'email' => "YKH@email.com",
                 'username' => "SSSC_YKH",
                 'password' => bcrypt('123456'),
-                'role' => "sssc",
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ], [
                 // 4A. FACILITIES
                 'name' => "Daniel Wong Ka Kui",
                 'email' => "DWKK@email.com",
-                'username' => "FAC_DWKK",
+                'username' => "FAC_1",
                 'password' => bcrypt('123456'),
-                'role' => "facilities_manager",
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ], [
                 // 4B. FACILITIES
                 'name' => "Siti Nusantara",
                 'email' => "SINUS@email.com",
-                'username' => "FAC_SINUS",
+                'username' => "FAC_2",
                 'password' => bcrypt('123456'),
-                'role' => "facilities_osha",
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],[
                 // 5. ITS
                 'name' => "Ridhwan Yousef",
                 'email' => "RIYO@email.com",
-                'username' => "ITS_RIYO",
+                'username' => "ITS_1",
                 'password' => bcrypt('123456'),
-                'role' => "its",
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ], [
                 // 6A. SEA ASSISTANT
                 'name' => "Leandra Sagah",
                 'email' => "LEANDRA@email.com",
-                'username' => "SEA_LEANDRA",
+                'username' => "SEA_1",
                 'password' => bcrypt('123456'),
-                'role' => "seaassistant",
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ], [
                 // 6B. SEA MANAGER
                 'name' => "Hisyam",
                 'email' => "HISYAM@email.com",
-                'username' => "SEA_HISYAM",
+                'username' => "SEA_2",
                 'password' => bcrypt('123456'),
-                'role' => "seamanager",
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ], [
                 // 7. REGISTRAR
                 'name' => "Adrian Aleen",
                 'email' => "ADALE@email.com",
-                'username' => "REG_ADALE",
+                'username' => "REG_1",
                 'password' => bcrypt('123456'),
-                'role' => "registrar",
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],[
                 // 8. FINANCE
                 'name' => "Fintu Syurga",
                 'email' => "FINSY@email.com",
-                'username' => "FINSY",
+                'username' => "FIN_1",
                 'password' => bcrypt('123456'),
-                'role' => "finance",
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ], [
                 // 9. Executive Group
                 'name' => "Gabriel Ting",
                 'email' => "GBTING@email.com",
-                'username' => "EG_GBTING",
+                'username' => "EXECGROUP",
                 'password' => bcrypt('123456'),
-                'role' => "execgroup",
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ], [
-                // 10. Super User
-                'name' => "Peter Wong",
-                'email' => "PWONG@email.com",
-                'username' => "SU_PWONG",
-                'password' => bcrypt('123456'),
-                'role' => "superuser",
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]

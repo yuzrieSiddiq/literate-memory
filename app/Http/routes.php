@@ -17,7 +17,16 @@ Route::get('/', function () {
 
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
+Route::group([
+    'middleware' => ['web', 'auth'],
+], function() {
+    Route::get('/home', 'HomeController@index');
+    Route::get('/student', [
+        'as'         => 'student.index',
+        'uses'       => 'StudentController@index',
+        'middleware' => ['role:student'],
+    ]);
+});
 
 Route::get('/club', function () {
     return view('club');
@@ -53,8 +62,4 @@ Route::get('/finance', function () {
 
 Route::get('/execgroup', function () {
     return view('execgroup');
-});
-
-Route::get('/superuser', function () {
-    return view('superuser');
 });
