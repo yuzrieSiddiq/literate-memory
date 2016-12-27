@@ -8,7 +8,9 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
+                    <h4>Welcome {{ $name }}</h4>
                     You are logged in!
+                    Role: {{ $role }}
                 </div>
             </div>
         </div>

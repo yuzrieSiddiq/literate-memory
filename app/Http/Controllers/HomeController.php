@@ -5,6 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 
+use Auth;
+use App\User;
+use App\Role;
+use DB;
+
 class HomeController extends Controller
 {
     /**
@@ -24,6 +29,28 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $data = [];
+        $username = Auth::user()->username;
+        $data['name'] = Auth::user()->name;
+        // $data['role'] = User::where('username', $username)->first();
+
+        // a user can have many roles
+        // NOTE: this might leak a bug - multiple role
+        $roles = User::where('username', $username)->first()->roles;
+        $data['role'] = [];
+        foreach ($roles as $role)
+            $data['role'] = $role->name;
+
+        switch ($data['role']) {
+            case 'student':
+                return redirect()->action('StudentController@index');
+                break;
+
+            default:
+                # code...
+                break;
+        }
+
+        return view('home', $data);
     }
 }
