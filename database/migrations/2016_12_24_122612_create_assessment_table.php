@@ -12,7 +12,15 @@ class CreateAssessmentTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('assessment', function(Blueprint $table)
+        {
+            $table->string('proposalID');
+            $table->string('responseplanID');
+            $table->string('assessmentID');
+            $table->timestamps();
+
+            $table->foreign('proposalID')->references('proposalID')->on('proposal');
+        });
     }
 
     /**
@@ -22,6 +30,6 @@ class CreateAssessmentTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('assessment');
     }
 }

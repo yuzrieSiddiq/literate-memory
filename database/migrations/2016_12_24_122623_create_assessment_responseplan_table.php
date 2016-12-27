@@ -12,7 +12,14 @@ class CreateAssessmentResponseplanTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('assessment_responseplan', function(Blueprint $table)
+        {
+            $table->string('responseplanID');
+            $table->string('description');
+            $table->timestamps();
+
+            $table->foreign('responseplanID')->references('responseplanID')->on('assessment');
+        });
     }
 
     /**
@@ -22,6 +29,6 @@ class CreateAssessmentResponseplanTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('assessment_responseplan');
     }
 }

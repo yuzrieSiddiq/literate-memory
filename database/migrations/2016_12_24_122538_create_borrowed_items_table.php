@@ -12,7 +12,13 @@ class CreateBorrowedItemsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('borrowed_items', function (Blueprint $table)
+        {
+            $table->string('requestID');
+            $table->string('itemID');
+            $table->integer('borrowedcount');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,6 +28,6 @@ class CreateBorrowedItemsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('borrowed_items');
     }
 }

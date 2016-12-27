@@ -12,7 +12,14 @@ class CreateAssessmentEventTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('assessment_event', function(Blueprint $table)
+        {
+            $table->string('assessmentID');
+            $table->string('description');
+            $table->timestamps();
+
+            $table->foreign('assessmentID')->references('assessmentID')->on('assessment');
+        });
     }
 
     /**
@@ -22,6 +29,6 @@ class CreateAssessmentEventTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('assessment_event');
     }
 }

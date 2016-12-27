@@ -12,7 +12,17 @@ class CreateEventprogrammeTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('eventprogramme', function(Blueprint $table)
+        {
+            $table->string('proposalID');
+            $table->date('data');
+            $table->date('time');
+            $table->text('programme');
+            $table->string('venue');
+            $table->timestamps();
+
+            $table->foreign('proposalID')->references('proposalID')->on('proposal');
+        });
     }
 
     /**
@@ -22,6 +32,6 @@ class CreateEventprogrammeTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('eventprogramme');
     }
 }

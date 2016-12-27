@@ -12,7 +12,15 @@ class CreateEquipmentRequestTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('equipment_requests', function(Blueprint $table)
+        {
+            $table->string('proposalID');
+            $table->string('requestID');
+            $table->timestamps();
+
+            $table->foreign('proposalID')->references('proposalID')->on('proposal');
+            $table->foreign('requestID')->references('requestID')->on('borrowed_items');
+        });
     }
 
     /**
@@ -22,6 +30,6 @@ class CreateEquipmentRequestTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('equipment_requests');
     }
 }
