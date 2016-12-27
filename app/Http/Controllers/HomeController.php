@@ -46,8 +46,48 @@ class HomeController extends Controller
                 return redirect()->action('StudentController@index');
                 break;
 
+            case 'advisor':
+                return redirect()->action('AdvisorController@index');
+                break;
+
+            case 'council':
+                return redirect()->action('SSSCController@index');
+                break;
+
+            case 'facilities_a':
+                return redirect()->action('FacilitiesAController@index');
+                break;
+
+            case 'facilities_b':
+                return redirect()->action('FacilitiesBController@index');
+                break;
+
+            case 'its':
+                return redirect()->action('ITSController@index');
+                break;
+
+            case 'sea_a':
+                return redirect()->action('SEAAController@index');
+                break;
+
+            case 'sea_b':
+                return redirect()->action('SEABController@index');
+                break;
+
+            case 'registrar':
+                return redirect()->action('RegistrarController@index');
+                break;
+
+            case 'finance':
+                return redirect()->action('FinanceController@index');
+                break;
+
+            case 'execgroup':
+                return redirect()->action('EGController@index');
+                break;
+
             default:
-                # code...
+                return redirect('/home');
                 break;
         }
 

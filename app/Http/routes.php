@@ -54,7 +54,7 @@ Route::group([
     Route::group([
         'middleware' => ['role:facilities_b']
     ], function() {
-        Route::resource('facilities', 'FacilitiesBController');
+        Route::resource('osha', 'FacilitiesBController');
     });
 
     // 6. ITS
@@ -68,14 +68,14 @@ Route::group([
     Route::group([
         'middleware' => ['role:sea_a']
     ], function() {
-        Route::resource('studentengagement', 'SEAAController');
+        Route::resource('sea_assisstant', 'SEAAController');
     });
 
     // 8. SEA Manager
     Route::group([
         'middleware' => ['role:sea_b'],
     ], function () {
-        Route::resource('studentengagement', 'SEABController');
+        Route::resource('sea_manager', 'SEABController');
     });
 
     // 9. Registrar
