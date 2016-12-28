@@ -18,10 +18,6 @@ class CreateClubsTable extends Migration
             $table->string('clubname');
             $table->integer('receivedfunds');
             $table->timestamps();
-
-            $table->foreign('clubID')->references('username')->on('users')
-                  ->onUpdate('cascade')->onDelete('cascade');
-            $table->primary(['user_id']);
         });
     }
 

@@ -17,8 +17,6 @@ class CreateAssessmentEventTable extends Migration
             $table->string('assessmentID');
             $table->string('description');
             $table->timestamps();
-
-            $table->foreign('assessmentID')->references('assessmentID')->on('assessment');
         });
     }
 

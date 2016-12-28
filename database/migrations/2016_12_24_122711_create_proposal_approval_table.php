@@ -15,26 +15,27 @@ class CreateProposalApprovalTable extends Migration
         Schema::create('proposal_approval', function(Blueprint $table)
         {
             $table->string('proposalID');
-            $table->bool('isAdvisorApproved');
+            $table->boolean('isAdvisorApproved');
             $table->string('advisorcomment');
-            $table->bool('isSSSCApproved');
+            $table->boolean('isSSSCApproved');
             $table->string('SSSCcomment');
-            $table->bool('isFacilitiesApproved');
+            $table->boolean('isFacilitiesApproved');
             $table->string('facilitiescomment');
-            $table->bool('isITSApproved');
+            $table->boolean('isITSApproved');
             $table->string('ITScomment');
-            $table->bool('isSEAApproved');
+            $table->boolean('isSEAApproved');
             $table->string('SEAcomment');
-            $table->bool('isRegistrarApproved');
+            $table->boolean('isRegistrarApproved');
             $table->string('registrarcomment');
-            $table->bool('isFinanceApproved');
+            $table->boolean('isFinanceApproved');
             $table->string('financecomment');
-            $table->bool('isEGApproved');
+            $table->boolean('isEGApproved');
             $table->string('EGcomment');
             $table->integer('approvaltrack');
             $table->timestamps();
 
-            $table->foreign('proposalID')->references('proposalID')->on('proposal');
+            // $table->foreign('proposalID')->references('proposalID')->on('proposal')
+            // ->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

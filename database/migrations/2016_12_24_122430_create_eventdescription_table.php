@@ -27,7 +27,8 @@ class CreateEventdescriptionTable extends Migration
             $table->string('programmeID')->unique();
             $table->timestamps();
 
-            $table->foreign('proposalID')->references('proposalID')->on('proposal');
+            // $table->foreign('proposalID')->references('proposalID')->on('proposal')
+            // ->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

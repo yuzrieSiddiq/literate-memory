@@ -18,8 +18,10 @@ class CreateEquipmentRequestTable extends Migration
             $table->string('requestID');
             $table->timestamps();
 
-            $table->foreign('proposalID')->references('proposalID')->on('proposal');
-            $table->foreign('requestID')->references('requestID')->on('borrowed_items');
+            // $table->foreign('proposalID')->references('proposalID')->on('proposal')
+            // ->onUpdate('cascade')->onDelete('cascade');
+            // $table->foreign('requestID')->references('requestID')->on('borrowed_items')
+            // ->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

@@ -17,8 +17,6 @@ class CreateAssessmentResponseplanTable extends Migration
             $table->string('responseplanID');
             $table->string('description');
             $table->timestamps();
-
-            $table->foreign('responseplanID')->references('responseplanID')->on('assessment');
         });
     }
 

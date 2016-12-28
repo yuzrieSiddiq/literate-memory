@@ -18,8 +18,6 @@ class CreateAssessmentTable extends Migration
             $table->string('responseplanID');
             $table->string('assessmentID');
             $table->timestamps();
-
-            $table->foreign('proposalID')->references('proposalID')->on('proposal');
         });
     }
 
