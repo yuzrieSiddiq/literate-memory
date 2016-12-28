@@ -15,7 +15,8 @@
                 <li role="presentation"><a href="#event-budget" aria-controls="event-budget" role="tab" data-toggle="tab">Event Budget</a></li>
             </ul>
 
-              <!-- Tab panes -->
+            <!-- Tab panes -->
+            <h4 class="pull-right text-muted">PROPOSAL ID</h4>
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade in active" id="event-description">
                     <div class="form-horizontal" id="form-event-description">
@@ -141,6 +142,39 @@
                             <label for="objective" class="col-sm-2 control-label">COMMITTEE</label>
                             <div class="col-sm-10">
                               <input type="text" class="form-control" id="committeename">
+                            </div>
+                        </div>
+
+                        <hr>
+                        <div class="form-group">
+                            <h4 class="col-sm-12 text-center">REQUESTS</h4>
+                            <p class="text-center text-danger">Leave the checkboxes unchecked if not needed</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="objective" class="col-sm-offset-2 col-sm-6">Would you like to request for <strong>equipments from Facilities/ITS?</strong></label>
+                            <div class="col-sm-4">
+                                <label class="checkbox">
+                                    <input type="checkbox" id="isEquipmentRequested" value="yes"> YES
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="objective" class="col-sm-offset-2 col-sm-6">Would you like to request for <strong>funds from SSSC?</strong></label>
+                            <div class="col-sm-4">
+                                <label class="checkbox">
+                                    <input type="checkbox" id="isEquipmentRequested" value="yes"> YES
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="objective" class="col-sm-offset-2 col-sm-6">Does the event involves third party? <strong>(Executive Group Involvement)</strong></label>
+                            <div class="col-sm-4">
+                                <label class="checkbox">
+                                    <input type="checkbox" id="isEquipmentRequested" value="yes"> YES
+                                </label>
                             </div>
                         </div>
 

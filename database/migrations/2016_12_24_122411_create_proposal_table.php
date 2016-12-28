@@ -14,6 +14,7 @@ class CreateProposalTable extends Migration
     {
         Schema::create('proposal', function(Blueprint $table)
         {
+            $table->increments('id');
             $table->string('proposalID')->unique();
             $table->string('clubID');
             $table->string('status');
@@ -24,7 +25,6 @@ class CreateProposalTable extends Migration
             $table->boolean('isExecGroupInvolved');    // check if need approval from - executive group
             $table->timestamps();
 
-            $table->primary('proposalID');
             $table->foreign('clubID')->references('clubID')->on('clubs')
             ->onUpdate('cascade')->onDelete('cascade');
         });
