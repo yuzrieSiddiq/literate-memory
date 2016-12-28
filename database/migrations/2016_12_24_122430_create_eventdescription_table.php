@@ -15,6 +15,7 @@ class CreateEventdescriptionTable extends Migration
         Schema::create('eventdescription', function(Blueprint $table)
         {
             $table->string('proposalID');
+            $table->string('title');
             $table->string('objective');
             $table->date('date');
             $table->date('time');

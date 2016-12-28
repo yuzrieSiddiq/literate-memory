@@ -247,7 +247,8 @@
                 </div>
 
                 <div class="panel-footer">
-                    <button class="btn btn-success" data-toggle="modal" data-target="#newproposal">NEW PROPOSAL</button>
+                    <a class="btn btn-success" href="{{ route('club.create') }}">NEW PROPOSAL</a>
+                    {{-- <button class="btn btn-success" data-toggle="modal" data-target="#newproposal">NEW PROPOSAL</button> --}}
                 </div>
             </div>
             {{-- end panel --}}

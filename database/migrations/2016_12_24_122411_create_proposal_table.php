@@ -13,6 +13,7 @@ class CreateProposalTable extends Migration
     public function up()
     {
         Schema::create('proposal', function(Blueprint $table) {
+            $table->increments('id');
             $table->string('proposalID');
             $table->string('clubID');
             $table->string('status');

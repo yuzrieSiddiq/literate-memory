@@ -20,12 +20,15 @@ class StudentController extends Controller
 
     /**
      * Show the form for creating a new resource.
+     * Create new proposal
      *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        //
+        $data = [];
+
+        return view ('proposal.create', $data);
     }
 
     /**
