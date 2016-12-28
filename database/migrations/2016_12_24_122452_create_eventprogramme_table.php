@@ -21,8 +21,8 @@ class CreateEventprogrammeTable extends Migration
             $table->string('venue');
             $table->timestamps();
 
-            // $table->foreign('proposalID')->references('proposalID')->on('proposal')
-            // ->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('proposalID')->references('proposalID')->on('proposal')
+            ->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

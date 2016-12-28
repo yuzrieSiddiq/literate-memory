@@ -14,9 +14,12 @@ class CreateAssessmentResponseplanTable extends Migration
     {
         Schema::create('assessment_responseplan', function(Blueprint $table)
         {
-            $table->string('responseplanID');
+            $table->string('proposalID');
             $table->string('description');
             $table->timestamps();
+
+            $table->foreign('proposalID')->references('proposalID')->on('proposal')
+            ->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

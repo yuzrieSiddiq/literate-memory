@@ -14,9 +14,12 @@ class CreateAssessmentEventTable extends Migration
     {
         Schema::create('assessment_event', function(Blueprint $table)
         {
-            $table->string('assessmentID');
+            $table->string('proposalID');
             $table->string('description');
             $table->timestamps();
+
+            $table->foreign('proposalID')->references('proposalID')->on('proposal')
+            ->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

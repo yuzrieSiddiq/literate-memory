@@ -34,8 +34,8 @@ class CreateProposalApprovalTable extends Migration
             $table->integer('approvaltrack');
             $table->timestamps();
 
-            // $table->foreign('proposalID')->references('proposalID')->on('proposal')
-            // ->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('proposalID')->references('proposalID')->on('proposal')
+            ->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

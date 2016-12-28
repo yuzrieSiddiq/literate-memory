@@ -14,10 +14,12 @@ class CreateClubsTable extends Migration
     {
         Schema::create('clubs', function(Blueprint $table)
         {
-            $table->string('clubID');
+            $table->string('clubID')->unique();
             $table->string('clubname');
             $table->integer('receivedfunds');
             $table->timestamps();
+
+            $table->primary('clubID');
         });
     }
 
