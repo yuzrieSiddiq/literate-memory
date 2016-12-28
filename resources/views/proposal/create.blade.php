@@ -91,7 +91,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="date" class="col-sm-2 control-label">ATTENDANCE <small><a class="tooltip" data-toggle="tooltip" data-placement="top" title="Rough estimate numbers of event attendees">?</a></small></label>
+                            <label for="date" class="col-sm-2 control-label">ATTENDANCE <span><a class="help-hover" data-toggle="tooltip" data-placement="top" title="Rough estimate numbers of event attendees">?</a></span></label>
                             <div class="col-sm-10">
                               <input type="number" class="form-control datepicker" id="eventEstimatedAttendance">
                             </div>
@@ -124,7 +124,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="objective" class="col-sm-2 control-label">OC NAME <small><a class="tooltip" data-toggle="tooltip" data-placement="top" title="Event Organiser / Organising Chairperson">?</a></small></label></label>
+                            <label for="objective" class="col-sm-2 control-label">OC NAME <small><a class="help-hover" data-toggle="tooltip" data-placement="top" title="Event Organiser / Organising Chairperson">?</a></small></label></label>
                             <div class="col-sm-10">
                               <input type="text" class="form-control" id="organisername">
                             </div>
@@ -206,7 +206,7 @@
                         <div class="table-responsive">
                             <table class="table table-striped" id="borrow_equipments_table">
                                 <tr>
-                                    <td class="text-center col-md-9">Item <a class="tooltip" data-toggle="tooltip" data-placement="top" title="e.g: Microphones, Signage stands, extension wires, etc...">?</a>
+                                    <td class="text-center col-md-9">Item <a class="help-hover" data-toggle="tooltip" data-placement="top" title="e.g: Microphones, Signage stands, extension wires, etc...">?</a>
                                     </td>
                                     <td class="text-center col-md-2">Amount</td>
                                     <td class="col-md-1"></td>
