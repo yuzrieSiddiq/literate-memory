@@ -415,3 +415,11 @@
     </div> {{-- end .row --}}
 </div> {{-- end .container --}}
 @endsection
+
+@section('extra_js')
+<script>
+(function() {
+    console.log('Hello');
+}) ()
+</script>
+@endsection
