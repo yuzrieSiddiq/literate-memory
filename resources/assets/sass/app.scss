@@ -1,11 +1,6 @@
 @import "_variables";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-// remove borders on .panel and .alert
-.panel, .alert {
-    border: none;
-}
-
 a:hover {
     text-decoration: none;
 }
