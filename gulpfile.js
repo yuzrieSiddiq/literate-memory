@@ -1,5 +1,5 @@
-var elixir = require('laravel-elixir');
-
+const elixir = require('laravel-elixir');
+require('laravel-elixir-webpack')
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -11,6 +11,10 @@ var elixir = require('laravel-elixir');
  |
  */
 
-elixir(function(mix) {
-    mix.sass('app.scss');
-});
+elixir((mix) => {
+    const bootstrapPath = './node_modules/bootstrap-sass/assets/'
+
+    mix.sass('app.scss')
+      .webpack('app.js')
+      .copy(bootstrapPath + 'fonts/**', 'public/fonts')
+})
