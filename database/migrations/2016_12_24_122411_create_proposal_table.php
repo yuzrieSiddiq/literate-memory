@@ -25,8 +25,8 @@ class CreateProposalTable extends Migration
             $table->boolean('isExecGroupInvolved');    // check if need approval from - executive group
             $table->timestamps();
 
-            $table->foreign('clubID')->references('clubID')->on('clubs')
-            ->onUpdate('cascade')->onDelete('cascade');
+            // $table->foreign('clubID')->references('clubID')->on('clubs')
+            // ->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

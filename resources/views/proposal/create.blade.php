@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('extra_head')
+    <meta name="_token" content="{{ csrf_token() }}"/>
+@stop
+
 @section('content')
 <div class="container">
     <div class="row">
@@ -182,6 +186,8 @@
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                                 <a class="btn btn-primary" href="#event-programme" aria-controls="event-programme" role="tab" data-toggle="tab">Next <span class="glyphicon glyphicon-chevron-right"></span></a>
+
+                                <button class="btn btn-info submit_proposal" data-method="POST" data-url="{{ route('club.store') }}">SUBMIT</button>
                             </div>
                         </div>
 
@@ -419,7 +425,44 @@
 @section('extra_js')
 <script>
 (function() {
-    console.log('Hello');
+    // csrf token
+    let getToken = function() {
+        return $('meta[name=_token]').attr('content')
+    }
+
+    // on click submit event
+    $('.submit_proposal').click(function() {
+        let booleanEditable             = false
+        let booleanEquipmentRequested   = false
+        let booleanFundRequested        = false
+        let booleanExecGroupInvolved    = false
+
+        let method  = $(this).data('method')
+        let url     = $(this).data('url')
+        let headers = {
+            'X-CSRF-Token'  : getToken()
+        }
+        let data    = {
+            proposalID      : 'testProposalID',
+            clubID          : 'testClubID',
+            status          : 'pending',
+            lastreviewedby  : 'testClubID',
+            isEditable           : booleanEditable,
+            isEquipmentRequested : booleanEquipmentRequested,
+            isFundRequested      : booleanFundRequested,
+            isExecGroupInvolved  : booleanExecGroupInvolved
+        }
+
+
+        $.ajax({
+            'url': url,
+            'method': method,
+            'data': data,
+            'headers': headers
+        }).done(function() {
+            console.log('Done - check the response')
+        })
+    })
 }) ()
 </script>
 @endsection

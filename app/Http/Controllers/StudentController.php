@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\Proposal;
+
 class StudentController extends Controller
 {
     /**
@@ -39,7 +41,29 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->only([
+            'proposalID',
+            'clubID',
+            'status',
+            'lastreviewedby',
+            'isEditable',
+            'isEquipmentRequested',
+            'isFundRequested',
+            'isExecGroupInvolved'
+        ]);
+
+        $newproposal = new Proposal;
+        $newproposal->proposalID            = $input['proposalID'];
+        $newproposal->clubID                = $input['clubID'];
+        $newproposal->status                = $input['status'];
+        $newproposal->lastreviewedby        = $input['lastreviewedby'];
+        $newproposal->isEditable            = $input['isEditable'];
+        $newproposal->isFundRequested       = $input['isFundRequested'];
+        $newproposal->isEquipmentRequested  = $input['isEquipmentRequested'];
+        $newproposal->isExecGroupInvolved   = $input['isExecGroupInvolved'];
+        $newproposal->save();
+
+        return response()->json($newproposal);
     }
 
     /**
