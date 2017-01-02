@@ -3,17 +3,18 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-3">
+            @include('sssc.menu')
+        </div>
+        <div class="col-md-9">
             <div class="panel panel-default">
                 <div class="panel-heading">SWINBURNE SARAWAK STUDENT COUNCIL</div>
 
                 <div class="panel-body">
                     NAME: NAME OF PERSON IN CHARGE
                 </div>
-            </div>
-        </div>
+            </div> <!-- end .panel -->
 
-        <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
                 <div class="panel-heading">STUDENTS CLUB PROPOSAL</div>
 
@@ -52,7 +53,8 @@
                     </div>
                 </div> <!-- end panel-body -->
             </div> <!-- end panel -->
-        </div> <!-- end col -->
+
+        </div>
     </div> <!-- end row -->
 
     <!-- MODAL - EXISTING PROPOSAL -->

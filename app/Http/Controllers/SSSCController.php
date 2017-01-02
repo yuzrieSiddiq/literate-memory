@@ -15,7 +15,27 @@ class SSSCController extends Controller
      */
     public function index()
     {
-        return view('sssc');
+        return view('sssc.home');
+    }
+
+    public function users()
+    {
+        return view('sssc.manage_users');
+    }
+
+    public function clubs()
+    {
+        return view('sssc.manage_clubs');
+    }
+
+    public function staffs()
+    {
+        return view('sssc.manage_staffs');
+    }
+
+    public function proposals()
+    {
+        return view('sssc.manage_proposals');
     }
 
     /**

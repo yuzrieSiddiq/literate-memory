@@ -40,6 +40,10 @@ Route::group([
     Route::group([
         'middleware' => ['role:council'],
     ], function () {
+        Route::get('sssc/users', ['as' => 'sssc.users', 'uses' => 'SSSCController@users']);
+        Route::get('sssc/clubs', ['as' => 'sssc.clubs', 'uses' => 'SSSCController@clubs']);
+        Route::get('sssc/staffs', ['as' => 'sssc.staffs', 'uses' => 'SSSCController@staffs']);
+        Route::get('sssc/proposals', ['as' => 'sssc.proposals', 'uses' => 'SSSCController@proposals']);
         Route::resource('sssc', 'SSSCController');
     });
 
