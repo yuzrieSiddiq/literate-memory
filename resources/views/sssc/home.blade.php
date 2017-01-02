@@ -15,48 +15,35 @@
                 </div>
             </div> <!-- end .panel -->
 
-            <div class="panel panel-default">
-                <div class="panel-heading">STUDENTS CLUB PROPOSAL</div>
+            <h4>PENDING PROPOSALS</h4>
+            <hr>
+            <div class="table-responsive">
+                <table class="table table-striped" id="pending-proposal">
+                    <tr>
+                        <td>No</td>
+                        <td>Club</td>
+                        <td>Date Submitted</td>
+                        <td>Status</td>
+                        <td></td>
+                    </tr>
 
-                <div class="panel-body">
-                    <div class="table-responsive">
-                        <table class="table table-striped">
-                            <tr>
-                                <td></td>
-                                <td>Club</td>
-                                <td>Date Submitted</td>
-                                <td>Status</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Swinburne Japanese Language Club</td>
-                                <td>19 JAN 2017</td>
-                                <td class="text-warning">Pending</td>
-                                <td><button class="btn btn-primary" data-toggle="modal" data-target="#proposal1">VIEW</button></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Swinburne Gitokukai Karate-do Club</td>
-                                <td>31 JAN 2017</td>
-                                <td class="text-warning">Pending</td>
-                                <td><button class="btn btn-primary" data-toggle="modal" data-target="#proposal1">VIEW</button></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Swinburne Kendo Club</td>
-                                <td>24 JAN 2017</td>
-                                <td class="text-warning">Pending</td>
-                                <td><button class="btn btn-primary" data-toggle="modal" data-target="#proposal1">VIEW</button></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div> <!-- end panel-body -->
-            </div> <!-- end panel -->
+                    {{-- example --}}
+                    {{-- TODO: foreach proposals as proposal if pending add here --}}
+                    <tr class="tr_template">
+                        <td>1</td>
+                        <td>Swinburne Japanese Language Club</td>
+                        <td>19 JAN 2017</td>
+                        <td class="text-warning">Pending</td>
+                        <td><button class="btn btn-primary" data-toggle="modal" data-target="#proposal1">VIEW</button></td>
+                    </tr>
 
+                </table>
+            </div> <!-- end .table-responsive -->
         </div>
     </div> <!-- end row -->
 
+    {{-- example modal --}}
+    {{-- TODO: use jquery to populate proposals --}}
     <!-- MODAL - EXISTING PROPOSAL -->
     <div class="modal fade" id="proposal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog modal-lg" role="document">
