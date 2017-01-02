@@ -14,7 +14,17 @@ class BorrowedItemsTableSeeder extends Seeder
     {
         DB::table('borrowed_items')->insert([
             [
-
+                'proposalID' => 'SJLC001',
+                'itemID'     => 'FAC01',
+                'borrowedcount' => '1',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ], [
+                'proposalID' => 'SJLC001',
+                'itemID'     => 'FAC02',
+                'borrowedcount' => '1',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ]
         ]);
     }

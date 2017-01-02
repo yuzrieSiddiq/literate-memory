@@ -14,7 +14,26 @@ class ProposalApprovalTableSeeder extends Seeder
     {
         DB::table('proposal_approval')->insert([
             [
-
+                'proposalID'            => 'SJLC001',
+                'isAdvisorApproved'     => 'false',
+                'advisorcomment'        => '-',
+                'isSSSCApproved'        => 'false',
+                'SSSCcomment'           => '-',
+                'isFacilitiesApproved'  => 'false',
+                'facilitiescomment'     => '-',
+                'isITSApproved'         => 'false',
+                'ITScomment'            => '-',
+                'isSEAApproved'         => 'false',
+                'SEAcomment'            => '-',
+                'isRegistrarApproved'   => 'false',
+                'registrarcomment'      => '-',
+                'isFinanceApproved'     => 'false',
+                'financecomment'        => '-',
+                'isEGApproved'          => 'false',
+                'EGcomment'             => '-',
+                'approvaltrack'         => '0',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ]
         ]);
     }

@@ -14,14 +14,13 @@ class CreateBorrowedItemsTable extends Migration
     {
         Schema::create('borrowed_items', function (Blueprint $table)
         {
-            $table->string('requestID')->unique();
+            $table->string('proposalID');
             $table->string('itemID');
             $table->integer('borrowedcount');
             $table->timestamps();
 
-            $table->primary('requestID');
             $table->foreign('itemID')->references('itemID')->on('requestable_items')
-            ->onUpdate('cascade')->onDelete('cascade');
+            ->onUpdate('cascade');
         });
     }
 

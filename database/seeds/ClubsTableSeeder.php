@@ -14,7 +14,11 @@ class ClubsTableSeeder extends Seeder
     {
         DB::table('clubs')->insert([
             [
-
+                'clubID' => 'SJLC',
+                'clubname' => 'Swinburne Japanese Language Club',
+                'receivedfunds' => '0',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ]
         ]);
     }

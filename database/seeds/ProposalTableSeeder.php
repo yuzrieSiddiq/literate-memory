@@ -14,7 +14,16 @@ class ProposalTableSeeder extends Seeder
     {
         DB::table('proposal')->insert([
             [
-
+                'proposalID'            => 'SJLC001',
+                'clubID'                => 'SJLC',
+                'status'                => 'pending',
+                'lastreviewedby'        => '-',
+                'isEditable'            => 'false',
+                'isEquipmentRequested'  => 'false',
+                'isFundRequested'       => 'false',
+                'isExecGroupInvolved'   => 'false',
+                'created_at'            => Carbon::now(),
+                'updated_at'            => Carbon::now(),
             ]
         ]);
     }

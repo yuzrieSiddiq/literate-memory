@@ -15,7 +15,7 @@ class CreateEventprogrammeTable extends Migration
         Schema::create('eventprogramme', function(Blueprint $table)
         {
             $table->string('proposalID');
-            $table->date('data');
+            $table->date('date');
             $table->date('time');
             $table->text('programme');
             $table->string('venue');

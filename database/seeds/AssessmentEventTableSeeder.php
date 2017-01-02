@@ -14,7 +14,10 @@ class AssessmentEventTableSeeder extends Seeder
     {
         DB::table('assessment_event')->insert([
             [
-
+                'proposalID' => 'SJLC001',
+                'description'=> 'Work in progress',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ]
         ]);
     }

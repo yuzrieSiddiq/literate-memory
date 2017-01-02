@@ -14,7 +14,10 @@ class AssessmentResponsePlanTableSeeder extends Seeder
     {
         DB::table('assessment_responseplan')->insert([
             [
-
+                'proposalID' => 'SJLC001',
+                'description'=> 'Work in progress',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ]
         ]);
     }

@@ -14,12 +14,11 @@ class CreateRequestableItemsTable extends Migration
     {
         Schema::create('requestable_items', function (Blueprint $table)
         {
+            $table->increments('id');
             $table->string('itemID')->unique();
             $table->string('name');
             $table->string('description');
             $table->timestamps();
-
-            $table->primary('itemID');
         });
     }
 
